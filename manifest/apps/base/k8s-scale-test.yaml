@@ -1,0 +1,13 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: k8s-scale-test
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/honahuku/k8s-hands-on.git
+    targetRevision: main
+    path: manifest/argocd/overlays/$(ENV)
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: k8s-scale-test
