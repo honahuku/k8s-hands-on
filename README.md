@@ -16,4 +16,4 @@ k9s
 kubectl apply -k manifest/apps/overlays/production
 # 以降はリポジトリにコミットで同期される
 ```
-最初から apps をデプロイすると 
+最初から apps をデプロイすると ArgoCD の CRD が定義されていないため先に ArgoCD だけデプロイする必要がある
