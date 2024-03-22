@@ -4,4 +4,17 @@ kind: Kustomization
 namespace: argocd
 
 resources:
+- application.yaml
 - argo-cd.yaml
+
+configurations:
+- kustomizeconfig.yaml
+
+vars:
+- fieldref:
+    fieldPath: metadata.labels.env
+  name: ENV
+  objref:
+    apiVersion: argoproj.io/v1alpha1
+    kind: Application
+    name: application

@@ -1,0 +1,7 @@
+varReference:
+  - path: spec/source/path
+    apiVersion: argoproj.io/v1alpha1
+    kind: Application
+  - path: spec/source/helm/values
+    apiVersion: argoproj.io/v1alpha1
+    kind: Application

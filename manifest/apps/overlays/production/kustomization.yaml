@@ -3,3 +3,8 @@ kind: Kustomization
 
 resources:
 - ../../base
+
+labels:
+- includeSelectors: true
+  pairs:
+    env: production
