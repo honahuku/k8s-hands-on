@@ -10,4 +10,4 @@ spec:
     app: k8s-scale-test
   ports:
     - port: 8080
-      targetPort: 8081
+      targetPort: 8080
