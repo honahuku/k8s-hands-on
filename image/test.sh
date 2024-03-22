@@ -5,7 +5,7 @@ set -o pipefail
 url="https://raw.githubusercontent.com/honahuku/k8s-hands-on/main/manifest/k8s-scale-test/condition.txt"
 
 while true; do
-	condition=$(curl -s $url)
+    condition=$(curl -s -H "Cache-Control: no-cache" -H "Pragma: no-cache" $url)
 	current_time=$(date '+%Y-%m-%d %H:%M:%S')
 
 	if [ "$condition" = "0" ]; then
