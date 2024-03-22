@@ -7,7 +7,7 @@ spec:
   source:
     repoURL: https://github.com/honahuku/k8s-hands-on.git
     targetRevision: main
-    path: apps/overlays/$(ENV)
+    path: manifest/apps/overlays/$(ENV)
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd
