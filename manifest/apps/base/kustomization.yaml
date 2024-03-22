@@ -7,6 +7,7 @@ resources:
 - application.yaml
 - argo-cd.yaml
 - k8s-scale-test.yaml
+- metric-server.yaml
 
 configurations:
 - kustomizeconfig.yaml
