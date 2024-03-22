@@ -17,8 +17,6 @@ spec:
       containers:
       - name: k8s-scale-test
         image: honahuku007/k8s_scale_test:latest
-        ports:
-        - containerPort: 80
         resources:
           requests:
             memory: "64Mi"
