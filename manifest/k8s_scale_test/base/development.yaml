@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: k8s-scale-test
+  labels:
+    app: k8s-scale-test
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: k8s-scale-test
+  template:
+    metadata:
+      labels:
+        app: k8s-scale-test
+    spec:
+      containers:
+      - name: k8s-scale-test
+        image: honahuku007/k8s_scale_test:latest
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
