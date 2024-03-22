@@ -1,0 +1,17 @@
+---
+# aqua - Declarative CLI Version Manager
+# https://aquaproj.github.io/
+# checksum:
+#   enabled: true
+#   require_checksum: true
+#   supported_envs:
+#   - all
+registries:
+- type: standard
+  ref: v4.155.0 # renovate: depName=aquaproj/aqua-registry
+packages:
+- name: derailed/k9s@v0.32.4
+- name: ahmetb/kubectx@v0.9.5
+- name: kubernetes/kubectl@v1.29.3
+- name: kubernetes-sigs/kustomize@kustomize/v5.3.0
+- name: kubernetes-sigs/kind@v0.22.0
