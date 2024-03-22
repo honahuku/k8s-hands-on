@@ -5,7 +5,6 @@ metadata:
   labels:
     app: k8s-scale-test
 spec:
-  replicas: 1
   selector:
     matchLabels:
       app: k8s-scale-test
