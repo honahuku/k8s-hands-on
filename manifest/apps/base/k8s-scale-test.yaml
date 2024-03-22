@@ -11,3 +11,7 @@ spec:
   destination:
     server: https://kubernetes.default.svc
     namespace: k8s-scale-test
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
