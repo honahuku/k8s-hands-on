@@ -15,3 +15,4 @@ packages:
 - name: kubernetes/kubectl@v1.29.3
 - name: kubernetes-sigs/kustomize@kustomize/v5.3.0
 - name: kubernetes-sigs/kind@v0.22.0
+- name: argoproj/argo-cd@v2.10.4
