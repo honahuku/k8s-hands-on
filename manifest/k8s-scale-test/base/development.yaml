@@ -1,25 +1,24 @@
+# ref: https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale-walkthrough/#run-and-expose-php-apache-server
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: k8s-scale-test
-  labels:
-    app: k8s-scale-test
+  name: php-apache
 spec:
   selector:
     matchLabels:
-      app: k8s-scale-test
+      run: php-apache
   template:
     metadata:
       labels:
-        app: k8s-scale-test
+        run: php-apache
     spec:
       containers:
-      - name: k8s-scale-test
-        image: honahuku007/k8s_scale_test:latest
+      - name: php-apache
+        image: registry.k8s.io/hpa-example
+        ports:
+        - containerPort: 80
         resources:
-          requests:
-            memory: "64Mi"
-            cpu: "250m"
           limits:
-            memory: "128Mi"
-            cpu: "500m"
+            cpu: 500m
+          requests:
+            cpu: 200m

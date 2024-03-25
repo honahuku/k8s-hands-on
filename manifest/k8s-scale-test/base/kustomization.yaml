@@ -7,3 +7,4 @@ resources:
 - development.yaml
 - hpa.yaml
 - namespace.yaml
+- service.yaml
