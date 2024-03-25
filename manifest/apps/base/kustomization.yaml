@@ -6,6 +6,7 @@ namespace: argocd
 resources:
 - application.yaml
 - argo-cd.yaml
+- argowf.yaml
 - k8s-scale-test.yaml
 - metric-server.yaml
 
