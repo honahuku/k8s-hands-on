@@ -1,12 +1,19 @@
-apiVersion: autoscaling/v1
+# ref: https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale-walkthrough/#run-and-expose-php-apache-server
+apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
-  name: k8s-scale-test-hpa
+  name: php-apache
 spec:
+  maxReplicas: 10
+  metrics:
+  - resource:
+      name: cpu
+      target:
+        averageUtilization: 50
+        type: Utilization
+    type: Resource
+  minReplicas: 1
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: k8s-scale-test
-  minReplicas: 1
-  maxReplicas: 10
-  targetCPUUtilizationPercentage: 50
+    name: php-apache
