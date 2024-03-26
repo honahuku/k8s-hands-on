@@ -4,7 +4,7 @@ kind: Kustomization
 namespace: k8s-scale-test
 
 resources:
-- development.yaml
+- deployment.yaml
 - hpa.yaml
 - namespace.yaml
 - service.yaml
