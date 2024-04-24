@@ -8,10 +8,10 @@ resources:
 - argo-cd.yaml
 # - argowf.yaml
 - grafana.yaml
-- k8s-monitoring.yaml
 - k8s-scale-test.yaml
 - metric-server.yaml
 - namespace.yaml
+- prometheus.yaml
 
 configurations:
 - kustomizeconfig.yaml
