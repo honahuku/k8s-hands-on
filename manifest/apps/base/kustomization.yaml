@@ -7,6 +7,7 @@ resources:
 - application.yaml
 - argo-cd.yaml
 # - argowf.yaml
+- grafana.yaml
 - k8s-scale-test.yaml
 - metric-server.yaml
 
