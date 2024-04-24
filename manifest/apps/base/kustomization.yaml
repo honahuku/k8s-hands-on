@@ -11,6 +11,7 @@ resources:
 - k8s-monitoring.yaml
 - k8s-scale-test.yaml
 - metric-server.yaml
+- namespace.yaml
 
 configurations:
 - kustomizeconfig.yaml
